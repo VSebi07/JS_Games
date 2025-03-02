@@ -1,0 +1,395 @@
+/* from landing.css */
+
+header h1{
+    text-align: center;
+    color: white;
+    font-variant: small-caps;
+    font-size: 14vh;
+    font-family: dynapuff;
+    border-bottom: 3px solid red;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 5vh;
+}
+
+header{
+    padding-inline: 4vh;
+}
+
+#menu-sor{
+    position: sticky;
+    top: 0;
+    padding: 12vh 4vh;
+    width: 100%;
+    border-radius: 4vh;
+    margin: auto;
+    justify-content: center;
+    gap: 1vh;
+    row-gap: 5vh;
+}
+
+.menu img{
+    object-fit: cover;
+    height: 50vh;
+    width: 40vh;
+    border-radius: 4vh;
+    transition: all .3s;
+    border: 3px solid whitesmoke;
+}
+
+.menu{
+    position: relative;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.h2-conti{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 40vh;
+}
+
+.menu-cim{
+    position: absolute;
+    bottom: 5vh;
+    font-family: dynapuff;
+    transition: all .3s;
+}
+
+
+.menu:hover p{
+    opacity: 1;
+    backdrop-filter: brightness(0.7);
+    border-radius: 3vh;
+}
+
+.menu p{
+    position: absolute;
+    bottom: 1vh;
+    width: 33ch;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transition: all .2s;
+    font-family: kreta-al;
+    font-size: 1.6vh;
+    padding: 1vh;
+}
+
+.bev{
+    position: relative;
+    color: white;
+    max-width: 75vh;
+    padding: 15vh 4vh;
+    padding-bottom: 0;
+    left: 5vh;
+}
+.bev > div{
+    display: flex;
+    justify-content: center;
+}
+
+#harmadik-menu img{
+    object-position: 60%;
+}
+
+#szekcio2{
+    position: relative;
+    top: 100vh;
+    min-height: 100vh;
+    background-image: url('pics/bkg1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y:center;
+    padding-top: 10vh;
+    border-block: 10px solid black;
+}
+
+#go-down{
+    text-decoration: none;
+    color: white;
+    background-color: #B22222;
+    padding: 2vh 3vh;
+    font-size: 2.4vh;
+    border-radius: 2vh;
+    transition: all .3s;
+    box-shadow: 0 0 3vh transparent;
+    font-family: dynapuff;
+    margin: 1vh;
+    margin-top: 6vh;
+}
+
+#go-down:hover{
+    background-color: red;
+    padding: 3vh 4vh;
+    margin: 0;
+    margin-top: 5vh;
+}
+
+#go-down i{
+    --fa-animation-iteration-count: 2;
+}
+#go-down:hover > i{
+    --fa-animation-iteration-count: infinite;
+}
+.menu_part {
+    width: auto;
+}
+
+#kezdo-conti{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+header h3 {
+    color: whitesmoke;
+    text-align: center;
+    font-family: dynapuff;
+}
+
+header > p {
+    color: whitesmoke;
+    font-family: dynapuff;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .menu img{
+        filter: brightness(0.6);
+    }
+    .menu:hover .menu-cim{
+        bottom: 10vh;
+        background-color: white;
+        border-radius: 4vh;
+        padding: 2vh;
+        color: black;
+    }
+    .menu:hover{
+        transform: translateY(-3vh);
+    }
+    .menu:hover img{
+        filter: brightness(0.8);
+    }
+    .menu-cim{
+        color: white;
+    }
+}
+
+@media screen and (max-width: 768px){
+    header > h1 {
+        font-size: 60px;
+    }
+    header > h3 {
+        font-size: large;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    #jobb{
+        margin-top: 15vh;
+    }
+    #szekcio2{
+        height: fit-content;
+    }
+    .menu img{
+        filter: brightness(1);
+    }
+    .menu-cim{
+        color: black;
+        background-color: white;
+        padding: 2vh;
+        border-radius: 4vh;
+        bottom: 10vh;
+    }
+    .menu p{
+        opacity: 1;
+        backdrop-filter: brightness(.5);
+        border-radius: 3vh;
+        padding: 1vh 2vh;
+    }
+}
+
+
+/* end of landing.css */
+
+body {
+    overflow-x: hidden;
+}
+
+#landing_main {
+    width: 100lvw;
+    height: 100dvh;
+    background-image: url(./pics/landing-image.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position-y: top;
+    background-position-x: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: whitesmoke;
+    text-align: center;
+    font-family: dynapuff;
+    position: fixed;
+    top: 0vh;
+}
+
+
+@keyframes landing {
+    to{
+        background-position-y: bottom;
+        background-size: 100%;
+    }
+}
+
+@keyframes landing-telo {
+    to{
+        background-position-y: bottom;
+        background-position-x: 25%;
+        background-size: 275%;
+    }
+}
+
+#landing_inner {
+    display: block;
+}
+
+#landing_inner > *{
+    opacity: 0;
+    transition: all .3s;
+    user-select: none;
+}
+
+#landing_inner > h3 {
+    font-size: 5vh;
+    font-family: roboto2;
+    letter-spacing: -.2vh;
+    margin-top: 0;
+    padding-top: 10vh;
+}
+
+#landing_inner > h1 {
+    font-family: kreta-al;
+}
+
+#landing_inner > p {
+    font-size: 2.5vh;
+    font-family: roboto2;
+    width: fit-content;
+    margin: auto;
+    padding: 1.5vh;
+}   
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    #landing_main{
+        background-size: 400%;
+        background-position-x: left;
+        animation: landing-telo 3s forwards ease-in-out .5s;
+    }
+    #landing_inner > h1{
+        font-size: 8vh;
+    }
+    body{
+        height: 400vh;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #landing_main{
+        background-size: 175%;
+        animation: landing 3s forwards ease-in-out .5s;
+    }
+    #landing_inner > h1{
+        font-size: 16vh;
+    }
+    body{
+        height: 300vh;
+    }
+}
+
+#sc-d{
+    opacity: 0;
+    margin-top: 5vh;
+    background-color: #005A92;
+    background-size: 120%;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: repeat;
+    border: none;
+    width: 24vh;
+    border-top-left-radius: 4vh;
+    border-top-right-radius: 4vh;
+    border-bottom-left-radius: 10vh;
+    border-bottom-right-radius: 10vh;
+    border: 2px solid transparent;
+}
+
+
+#sc-d a{
+    padding: 2vh 4vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    position: relative;
+    text-decoration: none;
+    color: whitesmoke;
+    transition: all .3s;
+}
+
+#sc-d span{
+    opacity: 0;
+    transition: all .3s;
+    font-family: montserrat-fk;
+    font-weight: bold;
+    font-size: 2vh;
+}
+
+#scroll-down{
+    transition: all .3s;
+    position: absolute;
+    left: 9vh;
+}
+
+#sc-d:hover #scroll-down{
+    left: 16vh;
+    transform: rotate(-90deg);
+}
+
+#sc-d:hover span{
+    opacity: 1;
+}
+
+#sc-d:hover{
+    animation: hullam 2s infinite;
+}
+
+@keyframes hullam {
+    50%{
+        background-position-x: 90%;
+    }
+}
+
+#telo_menu_bars{
+    position: fixed;
+    z-index: 999;
+    right: 5vh;
+    top: 5vh;
+}
+
+#legordulos_menu_telefon{
+    position: fixed;
+    z-index: 999;
+}

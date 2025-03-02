@@ -1,0 +1,181 @@
+body {
+    color: whitesmoke;
+    overflow-x: hidden;
+    background-color: #222;
+}
+
+h1{
+    margin-top: 0;
+    padding-top: 3vh;
+    font-family: dynapuff;
+}
+
+#bev-p{
+    font-family: montserrat-fk;
+    font-size: 2.5vh;
+}
+
+.marginAuto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.kocka {
+    text-align: center;
+}
+
+.korMezoi {
+    color: #FF0800;
+    transition: all .3s, color 0s;
+}
+
+.xMezoi {
+    color: #008000;
+    transition: all .3s, color 0s;
+}
+
+table{
+    margin-top: 10vh;
+}
+
+.no-click {
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.border-none {
+    border-collapse: collapse;
+    border: none;
+}
+  
+.border-none td {
+    border: 5px solid whitesmoke;
+}
+  
+.border-none tr:first-child td {
+    border-top: none;
+}
+  
+.border-none tr:last-child td {
+    border-bottom: none;
+}
+  
+.border-none tr td:first-child {
+    border-left: none;
+}
+  
+.border-none tr td:last-child {
+    border-right: none;
+}
+
+
+td span{
+    --fa-animation-iteration-count: 1;
+    --fa-beat-scale: 1.1;
+}
+
+.container-fluid{
+    width: 100vw;
+    height: 100vh;
+}
+
+@media screen and (max-width: 768px) {
+    table{
+        width: 45vh;
+        height: 45vh;
+    }
+    .kocka{
+        width: 15vh;
+        height: 15vh;
+    }
+    .korMezoi, .xMezoi{
+        font-size: 7.5vh;
+    }
+    #ttt_introDiv > .row {
+        row-gap: 10vh;
+    }
+    #valasztas-sor{
+        gap: 5vh;
+    }
+    #valasztas-sor .kategoria{
+        width: 35vw;
+    }
+    .jatek_szabaly {
+        width: 95vw;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    table{
+        width: 60vh;
+        height: 60vh;
+    }
+    .kocka{
+        width: 20vh;
+        height: 20vh;
+    }
+    .korMezoi, .xMezoi{
+        font-size: 10vh;
+    }
+    .jatek_szabaly{
+        width: 60vw;
+    }
+}
+
+.ki_kezd {
+    width: 30vw;
+    height: 30vh;
+    max-width: 500px;
+    max-height: 300px;
+    display: block;
+    margin: auto;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    font-size: 60px;
+}
+
+#kep_x {
+    font-size: 20vh;
+    color: #008000;
+}
+
+#kep_kor {
+    font-size: 15vh;
+    margin-top: 2.5vh;
+    color: #FF0800;
+}
+
+#ttt_introDiv, #ttt_mainDiv{
+    transition: all .4s;
+}
+
+#ttt_introDiv > .row {
+    justify-content: center;
+    margin-top: 10vh;
+}
+
+.jatek_szabaly {
+    text-align: center;
+    color: whitesmoke;
+    font-family: dynapuff;
+    border: 1px solid whitesmoke;
+    margin: auto;
+    margin-top: 15vh;
+    padding: 5vh;
+    margin-bottom: 30vh;
+}
+
+.jatek_szabaly > ul {
+    text-align: justify;
+    font-family: roboto;
+    font-size: larger;
+}
+
+.jatek_szabaly > ul > li {
+    padding-block: 1vh;
+}
+
+#valasztas-sor .kategoria{
+    border: 3px solid white;
+    border-radius: 3vh;
+}

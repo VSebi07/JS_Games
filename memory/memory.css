@@ -1,0 +1,271 @@
+body {
+    background-color: #222;
+    color: whitesmoke;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+.allCenter {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#jatekter i {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f1f1f1;
+    transition: all .5s;
+    cursor: pointer;
+    box-shadow: 0 0 2vh whitesmoke;
+    font-size: 4.5vh;
+    border-radius: 2vh;
+}
+
+#jatekter i:not(.par).nem-aktiv{
+    background-color: #222;
+}
+#jatekter i:not(.nem-aktiv):not(.par){
+    background-color: #E89611;
+}
+.par{
+    background-color: #0047AB ;
+}
+
+#jatekter i::before{
+    transform: rotateY(180deg);
+    transition: opacity .4s;
+}
+
+#jatekter{
+    display: grid;
+}
+
+#lepesek_div{
+    display: none;
+    background-color: #005A92;
+    box-shadow: 0 0 25vh #005A92;
+    padding: 3vh;
+    font-family: kreta-al;
+    transition: all .4s;
+    border-radius: 5vh;
+    height: fit-content;
+}
+
+#lepesek_div p{
+    margin-block: 1.5vh;
+    font-size: 3vh;
+}
+
+.nem-aktiv::before{
+    opacity: 0;
+}
+
+i::before:not(.nem-aktiv){
+    opacity: 1;
+}
+
+.conti{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.row > div {
+    padding: 0;
+}
+
+.egyadat{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+}
+
+h3{
+    margin: 0;
+}
+
+.row.wrapper{
+    height: 100vh;
+    align-items: center;
+    z-index: -1;
+}
+
+
+
+select{
+    background-color:#0047AB;
+    color: white;
+    border: none;
+    padding: .5vh 1vh;
+    border-radius: 2vh;
+    box-shadow: 0 0 3vh #0047AB;
+    font-family: kreta-al;
+    user-select: none;
+}
+
+option{
+    background-color: white;
+    color: #0047AB;
+    cursor: pointer;
+    font-size: 2.2vh;
+
+}
+
+#bev{
+    transition: all .3s;
+    max-width: 100vw;
+    min-height: 100vh;
+}
+
+#bev label{
+    font-size: 2.5vh;
+    margin-right: 2vh;
+    font-family: roboto;
+}
+
+h1{
+    font-family: kreta;
+    margin-top: 0;
+    padding-top: 4vh;
+}
+
+#kezdes, #szabaly-popup{
+    margin-top: 5vh;
+    color: white;
+    padding: 2vh 3vh;
+    border-radius: 3vh;
+    border: none;
+    user-select: none;
+    vertical-align: middle;
+    transition: all .25s;
+}
+
+#kezdes:hover, #szabaly-popup:hover{
+    transform: translateX(1.5vh) translateY(1.5vh);
+    box-shadow: -1.5vh -1.5vh rgba(0, 0, 0, 0.7);
+}
+
+#kezdes{
+    background-color: #0047AB;
+}
+
+#szabaly-popup{
+    font-family: roboto2;
+    font-size: 2.5vh;
+    margin-left: 3vh;
+    background-color: #B22222;
+}
+
+.container-fluid{
+    opacity: 0;
+    height: 100vh;
+    display: none;
+}
+
+#win-modal > h3#wh3{
+    font-size: 2.5vh;
+}
+
+@media screen and (max-width: 768px) {
+    #lepesek_div{
+        padding: 0;
+        position: absolute;
+        top: 0;
+        z-index: 999;
+        display: flex;
+        justify-content: center;
+        gap: 6vh;
+        padding-block: 1vh;
+    }
+    #lepesek_div p{
+        margin-block: 1vh;
+    }
+    #jatekter{
+        gap: 1vh;
+    }
+    .conti{
+        margin-top: 5vh;
+    }
+    #szabalyok{
+        gap: 0;
+    }
+    h1{
+        margin-bottom: 4vh;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    #jatekter{
+        gap: 2vh;
+    }
+    #jatekter i{
+        border-radius: 2vh;
+    }
+    .conti{
+        margin-left: -15vh;
+    }
+    #lepesek_div{
+        width: 20vh;
+        height: 20vh;
+        margin-left: 5vh;
+    }
+    #szabalyok img{
+        transform: scale(0.85);
+    }
+    #szabalyok p{
+        padding-inline: 4vh;
+    }
+    h1{
+        margin-bottom: 2vh;
+    }
+}
+
+#szabalyok{
+    margin-inline: 5vh;
+    opacity: 0;
+    transform: translateY(15vh);
+    margin-top: 5vh;
+    padding: 4vh;
+    user-select: none;
+    justify-content: center;
+    gap: 3vh;
+    transition: all .5s;
+}
+
+#szabalyok > div{
+    transition: all .2s;
+    border-radius: 2vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3vh;
+    padding-bottom: 4vh;
+}
+
+#szabalyok p{
+    text-align: justify;
+    min-width: 30ch;
+    max-width: 40ch;
+    hyphens: auto;
+    margin: auto;
+    font-family: roboto;
+    margin-top: 2vh;
+}
+
+#szabalyok img{
+    height: 30vh; 
+    width: 30vh;
+    object-fit: cover;
+    margin-bottom: 2vh;  
+    -webkit-user-drag: none; 
+    box-shadow: 0 0 10vh rgba(0, 0, 0, 0.7);
+    border-radius: 1.5vh;
+    margin: auto;
+    cursor: zoom-in;
+}

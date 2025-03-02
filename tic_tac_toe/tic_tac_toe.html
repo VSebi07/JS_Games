@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="pics/favicon.png">
+    <title>Tic-tac-toe</title>
+    <link rel="stylesheet" href="../_all/bootstrap_5.3/css/bootstrap.css">
+    <link rel="stylesheet" href="../_all/modal.css">
+    <link rel="stylesheet" href="../_all/font.css">
+    <link rel="stylesheet" href="../_all/allstyles.css">
+    <link rel="stylesheet" href="./tic_tac_toe.css">
+    <script src="https://kit.fontawesome.com/85a6127b1c.js" crossorigin="anonymous"></script>
+</head>
+<body onload="Meretek()" onresize="Meretek()">
+    <div id="menu">
+        <i id="menu_fogomb" class="fa-solid fa-bars fa-lg"></i>
+        <a href="../index.html">Főoldal</a>
+        <a href="../tic_tac_toe/tic_tac_toe.html">TicTacToe</a>
+        <a href="../hangman/hangman.html">Akasztófa</a>
+        <a href="../memory/memory.html">Memória</a>
+    </div>
+
+    <div class="game_title">
+        <h1>
+            Tic-Tac-Toe
+        </h1>
+        <div id="telo_menu_bars" onclick="DropdownMenu()">
+            <i class="fa-solid fa-bars fa-2x"></i>
+        </div>
+        <div id="legordulos_menu_telefon">
+            <ul>
+                <a href="../index.html">
+                    <li>
+                        <i class="fa-solid fa-house-chimney fa-2x"></i>
+                        <span>Főoldal</span>
+                    </li>
+                </a>
+                <a href="../tic_tac_toe/tic_tac_toe.html">
+                    <li>
+                        <i class="fa-solid fa-chess-board fa-2x"></i>
+                        <span>Tic-Tac-Toe</span>
+                    </li>
+                </a>
+                <a href="../memory/memory.html">
+                    <li>
+                        <i class="fa-solid fa-clone fa-2x"></i>
+                        <span>Memória</span>
+                    </li>
+                </a>
+                <a href="../hangman/hangman.html">
+                    <li>
+                        <i class="fa-solid fa-face-dizzy fa-2x"></i>
+                        <span>Akasztófa</span>
+                    </li>
+                </a>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div id="egesz_oldal">
+        <div id="ttt_introDiv">
+            <p class="text-center" id="bev-p">
+                Ki kezdje a játékot?
+            </p>
+    
+            <div class="row" id="valasztas-sor">
+                <div class="col-2 kategoria">
+                    <input type="button" name="kat-valasztas" class="kat-input" onclick="kezdes = 0; Start_ttt()">
+                    <i id="kep_x" class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="col-2 kategoria">
+                    <input type="button" name="kat-valasztas" class="kat-input" onclick="kezdes = 1; Start_ttt();">
+                    <i id="kep_kor" class="fa-regular fa-circle"></i>
+                </div>
+            </div>
+    
+            <div class="jatek_szabaly">
+                <h3>Játékleírás</h3>
+                <ul>
+                    <li>
+                        A Tic-Tac-Toe játékot egy 3x3-as rácson játsszák két játékos, egyikük "X", a másik "O" jelet használ.
+                    </li>
+                    <li>
+                        A játékosok felváltva helyezik el a jeleiket a rács üres mezőin, minden körben egyet-egyet.
+                    </li>
+                    <li>
+                        A cél az, hogy a saját jeledből három egymás melletti mezőre kerüljön vízszintesen, függőlegesen vagy átlósan.
+                    </li>
+                    <li>
+                        Ha valamelyik játékosnak sikerül ilyen három egymást követő jelet kialakítania, megnyeri a játékot.
+                    </li>
+                    <li>
+                        Ha a rács minden mezője betelik anélkül, hogy bármelyik játékosnak három azonos jel állna sorban, a játék döntetlennel zárul.
+                    </li>
+                </ul>
+            </div>
+           
+        </div>
+    
+        <div id="ttt_mainDiv" class="hiddenElement">
+            
+            <div id="win-modal">
+                <h2></h2>
+                <div id="jel-conti"></div>
+                
+                <h3></h3>
+                <div class="button-conti">
+                    <button></button>
+                    <a href="../index.html">Irány a Főoldal<i class="fa-solid fa-right-to-bracket" style="margin-left: 1vh"></i></a>
+                    
+                </div>
+                
+            </div>
+            <div class="oldalnav">
+                
+            </div>
+            <div class="container-fluid">
+            
+                <p class="text-center" id="bev-p">
+                    Jó szórakozást a játékhoz!
+                </p>
+            
+                <table id="tablazat" class="marginAuto border-none">
+                    <tr>
+                        <td id="k1" class="kocka" onclick="Kocka1()"></td>
+                        <td id="k2" class="kocka" onclick="Kocka2()"></td>
+                        <td id="k3" class="kocka" onclick="Kocka3()"></td>
+                    </tr>
+                    <tr>
+                        <td id="k4" class="kocka" onclick="Kocka4()"></td>
+                        <td id="k5" class="kocka" onclick="Kocka5()"></td>
+                        <td id="k6" class="kocka" onclick="Kocka6()"></td>
+                    </tr>
+                    <tr>
+                        <td id="k7" class="kocka" onclick="Kocka7()"></td>
+                        <td id="k8" class="kocka" onclick="Kocka8()"></td>
+                        <td id="k9" class="kocka" onclick="Kocka9()"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+
+    
+
+
+    
+    <script src="../_all/modal.js"></script>
+    <script src="../_all/menu.js"></script>
+    <script src="./tic_tac_toe.js"></script>
+    <script src="../_all/bootstrap_5.3/js/bootstrap.js"></script>
+    <script src="../_all/dropdown_menu.js"></script>
+</body>
+</html>

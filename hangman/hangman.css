@@ -1,0 +1,308 @@
+#talaldkiezt {
+    text-align: center;
+    color: whitesmoke;
+    user-select: none;
+    font-family: roboto;
+}
+
+body, .container-fluid {
+    background-color: #222;
+    overflow-x: hidden;
+}
+#betu-kulso{
+    display: flex;
+    justify-content: center;
+}
+#betuk{
+    margin: auto;
+    margin-top: 10vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#betuk > button {
+    width: 8vh;
+    height: 8vh;
+    border-radius: 2.5vh;
+    margin: 10px;
+    font-size: 5.5vh;
+    background-color: #0047AB;
+    color: white;
+    border: none;
+    transition: all .25s;
+    border: 2px solid transparent;
+    font-family: sister;
+    user-select: none;
+    text-align: center;
+}
+
+#betuk > button:not(.tipp):hover{
+    box-shadow: -1.5vh -1.5vh black;
+    transform: translateX(1.5vh) translateY(1.5vh);
+
+}
+
+#kep_tarto {
+    display: flex;
+    align-items: center;
+    object-fit: cover;
+    position: relative;
+    justify-content: center;
+}
+
+.hm{
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: .3s all;
+    filter: invert(100%);
+    background-color: #dddddd;
+    -webkit-user-drag: none;
+}
+
+.aktkep{
+    opacity: 1;
+    transition: all .3s;
+}
+
+h1{
+    margin-top: 0;
+}
+
+button.tipp{
+    cursor: no-drop;
+}
+
+.razkodas{
+    animation: razkodas .7s;
+}
+
+@keyframes razkodas {
+    20%{
+        transform: rotate(10deg);
+    }
+    40%{
+        transform: rotate(-10deg);
+    }
+    60%{
+        transform: rotate(10deg);
+    }
+    80%{
+        transform: rotate(-10deg);
+    }
+}
+
+#win-modal h3{
+    margin: 0;
+    font-size: 2.5vh;
+}
+
+#win-modal p{
+    font-size: 3vh;
+    transition: all .3s;
+}
+
+
+
+#jel-conti span{
+    --fa-animation-delay: 3000ms;
+    --fa-animation-iteration-count: 2;
+}
+
+#hangman_intro{
+    transition: all .3s;
+    opacity: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100vw;
+}
+
+#hangman_intro > p, h1{
+    color: whitesmoke;
+    margin-block: 2vh;
+    width: 100vw;
+    text-align: center;
+}
+
+#hangman_intro > p{
+    font-family: roboto;
+    margin-bottom: 4vh;
+}
+
+.container-fluid{
+    display: none;
+    opacity: 0;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    min-height: 300vh;
+}
+
+#inditas{
+    margin-top: 5vh;
+    background-color: #0047AB;
+    border: none;
+    color: whitesmoke;
+    padding: 2vh 3vh;
+    border-radius: 3vh;
+    margin-bottom: 5vh;
+}
+
+#inditas i{
+    --fa-animation-iteration-count: 0;
+    --fa-beat-scale: 1.15;
+}
+
+#inditas:hover i{
+    --fa-animation-iteration-count: infinite;
+}
+
+@media screen and (min-width: 768px) {
+    #betuk{
+        max-width: max(60vh, 50vw);
+    }
+    #talaldkiezt{
+        font-size: 6vh;
+        letter-spacing: 1.2vh;
+    }
+    .hm{
+        max-width: 50vh;
+    }
+    #kep_tarto{
+        margin-top: 15vh;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #betuk{
+        max-width: 90vw;
+        margin-top: 5vh;
+    }
+    #talaldkiezt{
+        font-size: 5vh;
+        letter-spacing: 0.75vh;
+    }
+    #betuk > button {
+        width: 6vh;
+        height: 6vh;
+        border-radius: 1.5vh;
+        margin: 5px;
+        font-size: 4vh;
+    }
+    #kep_tarto{
+        margin-top: 3vh;
+    }
+    .hm{
+        max-width: 90vw;
+        left: 5vw;
+    }
+    .kategoria{
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+    #pc-sav{
+        display: none;
+    }
+}
+
+#hangman_intro .row{
+    width: 100%;
+    gap: 3vh;
+    row-gap: 4vh;
+    margin-block: 5vh;
+    justify-content: center;
+}
+
+.kategoria > img{
+    width: 25vh;
+    height: 25vh;
+    object-fit: cover;
+    object-position: 10%;
+    border-radius: 50vh;
+    transition: all .4s;
+}
+
+
+
+.kat-kivalaszt{
+    color: white;
+    position: absolute;
+    top: 0;
+    transition: all .2s;
+    text-shadow: 0 0 4vh;
+}
+
+#focim{
+    margin-bottom: 7vh;
+}
+
+#katdisplay{
+    color: whitesmoke;
+    font-family: roboto;
+    margin: auto;
+    width: fit-content;
+    margin-bottom: 4vh;
+    font-size: 4vh;
+    border-bottom: 2px solid white;
+    transition: all .2s;
+    cursor: default;
+    font-size: 3.5vh;
+    padding-top: 5vh;
+}
+
+#katdisplay:hover{
+    border-bottom: 2px solid #B22222;
+}
+
+.tevesztes{
+    display: flex;
+    height: 8vh;
+    align-items: center;
+    gap: 1vh;
+    color: whitesmoke;
+}
+
+#hangman_intro label{
+    color: whitesmoke;
+    margin-right: 2vh;
+    display: flex;
+    align-items: center;
+    font-family: sister;
+    font-size: 2.5vh;
+}
+
+#pc-sav{
+    justify-content: center;
+    background-color: #005A92;
+    font-size: 3vh;
+    gap: 3vh;
+    width: 20vw;
+    margin: auto;
+    border-top-left-radius: 4vh;
+    border-top-right-radius: 4vh;
+    border-bottom-left-radius: 10vh;
+    border-bottom-right-radius: 10vh;
+    position: sticky;
+    top: 0;
+}
+
+#fok-valaszt{
+    background-color: #005A92;
+    border: none;
+    color: white;
+    font-family: roboto;
+    padding: 2vh;
+    border-radius: 3vh;
+    cursor: pointer;
+}
+
+#fok-valaszt option{
+    background-color: white;
+    color: #005A92;
+    border-radius: 2vh;
+}

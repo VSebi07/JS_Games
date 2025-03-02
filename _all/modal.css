@@ -1,0 +1,89 @@
+:root{
+    --modal-szelesseg: 50vh;
+    --modal-magassag: 50vh;
+}
+    
+#win-modal{
+    position: absolute;
+    top: calc((100vh - var(--modal-magassag)) / 2);
+    left: calc((100vw - var(--modal-szelesseg)) / 2);
+    width: var(--modal-szelesseg);
+    height: var(--modal-magassag);
+    background-color: #EDF7F6;
+    transition: transform .65s ease-in-out, opacity .3s;
+    transform: scale(0);
+    opacity: 0;
+    z-index: 999;
+    border-radius: 4vh;
+}
+
+#win-modal > h2, #win-modal > h3{
+    color: black;
+    text-align: center;
+    opacity: 0;
+    transition: .25s;
+}   
+
+#win-modal > h3{
+    font-family: kreta-al;
+    font-size: 3vh;
+    margin-bottom: 0;
+    padding: 2vh;
+}
+#win-modal > h2{
+    margin-top: 0;
+    padding-bottom: 2.5vh;
+    padding-top: 4vh;
+    border-top-left-radius: 4vh;
+    border-top-right-radius: 4vh;
+    border-bottom-left-radius: 12.5vh;
+    border-bottom-right-radius: 12.5vh;
+    color: white;
+    font-size: 5vh;
+    font-family: kreta-al;
+}
+.button-conti{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 3vh;
+}
+.button-conti > *{
+    color: white;
+    border: none;
+    border-radius: 3vh;
+    background-color: #1F75FE ;
+    box-shadow: 0 0 1.5vh #222;
+    padding: 1.5vh 2vh;
+    transition: transform .3s, box-shadow .2s;
+    font-family: roboto2;
+    font-size: 2.2vh;
+    opacity: 0;
+    transition: .3s all;
+    text-decoration: none;
+    user-select: none;
+}
+.button-conti > *:hover{ 
+    transform: translateX(1vh) translateY(1vh);
+    box-shadow: -1vh -1vh rgba(0, 0, 0, 0.7);
+}
+
+#jel-conti{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    transition: all .3s;
+    opacity: 0;
+}   
+
+#jel-conti > span{
+    --fa-animation-iteration-count: 1;
+    --fa-animation-delay: 2000ms;
+}
+
+#win-modal p{
+    text-align: center;
+    color: #0047AB;
+    font-family: roboto2;
+    opacity: 0;
+}

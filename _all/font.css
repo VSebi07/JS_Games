@@ -1,0 +1,29 @@
+@font-face {
+    font-family: kreta-al;
+    src: url('fonts/KGBlankSpaceSketch.ttf');
+}
+
+@font-face {
+    font-family: montserrat-fk;
+    src: url('fonts/Montserrat-Bold.ttf');
+}
+
+@font-face {
+    font-family: roboto;
+    src: url('fonts/Roboto-Light.ttf');
+}
+
+@font-face {
+    font-family: roboto2;
+    src: url('fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: sister;
+    src: url('fonts/LoveYaLikeASister-Regular.ttf');
+}
+
+@font-face {
+    font-family: dynapuff;
+    src: url('fonts/DynaPuff-Bold.ttf');
+}

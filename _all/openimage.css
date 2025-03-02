@@ -1,0 +1,76 @@
+#teljes-kepernyos-kep{
+	position: fixed;
+	top: 0;
+	z-index: 1000000;
+	transform: scale(0);
+	display: none;
+}
+
+#nagy-kep{
+	object-fit: contain;
+	position: relative;
+	transform: scale(0);
+	transition: all .4s;
+}
+
+#kep-conti{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+#fullscreen-bezar{
+	position: absolute;
+	right: 0;
+	transition: all .3s;
+	cursor: pointer;
+}
+#fullscreen-bezar::before{
+	max-width: 4vh;
+	max-height: 4vh;
+}
+#fullscreen-bezar:hover{
+	transform: rotateZ(45deg);
+}
+#leiras{
+	color: white;
+	opacity: 0;
+	transition: all .3s;
+	position: relative;
+	margin: auto;
+	width: fit-content;
+	font-size: 2.5vh;
+    top: 5vh;
+    font-family: roboto;
+}
+
+@media screen and (min-width: 768px) {
+	#teljes-kepernyos-kep{
+		left: 20vw;
+		top: 20vh;
+	}
+	#nagy-kep{
+		width: 60vw;
+		height: 60vh;
+	}
+	#fullscreen-bezar{
+		top: 0;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	#nagy-kep{
+		width: 90vw;
+	}
+	#teljes-kepernyos-kep{
+		left: 0;
+		top: 20vh;
+	}
+	#fullscreen-bezar{
+		top: -10vh;
+		right: 4vh
+	}
+	#leiras{
+		padding-inline: 3vh;
+	}
+}

@@ -1,0 +1,411 @@
+::selection{
+    background-color: #B22222;
+    color: white;
+}
+
+.container-fluid{
+    transition: all .4s;
+}
+
+.container-fluid {
+    position: relative;
+}
+
+.hiddenElement {
+    display: none;
+}
+
+/* Offcanvas stílus */
+
+.offcanvas-header {
+    height: 20vh;
+}
+
+.offc_conti {
+    height: 20vh;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+}
+
+.offc_conti:not(:last-child){
+    margin-bottom: 1.75vh;
+}
+
+.offc_conti img{
+    object-fit: cover;
+    height: 20vh;
+    border-radius: 3vh;
+}
+
+.menu-cim{
+    color: white;
+    font-family: dynapuff;
+    transition: all .3s;
+}
+
+.blocki{
+    position: absolute;
+    top: 0;
+    height: 20vh;
+}
+
+.oldalnav-cim{
+    text-align: center;
+    margin: .5vh;
+}
+
+.oldalnav-cim{
+    font-family: dynapuff;
+    color: whitesmoke;
+    position: absolute;
+    top: 8vh;
+    transition: all .3s;
+    width: 50%;
+    left: 25%;
+    border-radius: 4vh;
+    padding: 1vh 0;
+}
+
+.offc_conti:hover .oldalnav-cim{
+    transform: translateY(-5vh);
+    color: black;
+    background-color: whitesmoke;
+}
+
+.offcanvas-body > div{
+    margin: auto;
+}
+
+.offc_conti > a > img {
+    filter: brightness(.6);
+}
+
+.offcanvas-title {
+    font-size: 5vh;
+    font-family: dynapuff;
+    margin-left: 2vh;
+}
+
+
+.btn {
+    margin: 15px;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: x-large;
+    background-color: #0047ab;
+    border: 3px whitesmoke solid;
+    transition: .3s;
+    border-radius: 20px;
+    position: fixed;
+    z-index: 1000;
+}
+
+.btn:hover {
+    background-color: whitesmoke;
+    border: 3px solid #005A92;
+    color: #0047ab;
+}
+.tnav-elem{
+    display: flex;
+    flex-wrap: wrap;
+}
+.tnav-elem > i{
+    text-decoration: none;
+    color: white;
+}
+
+.tnav-elem > span{
+    font-size: 1vh;
+    color: white;
+}
+
+
+
+
+/* hangman kategóriás cucc */
+
+.kategoria{
+    position: relative;
+    transition: transform .4s;
+    display: flex;
+    justify-content: center;
+}
+
+.h3-conti{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25vh;
+    top: 12.5vh;
+    height: 12.5vh;
+    border-bottom-left-radius: 50vh;
+    border-bottom-right-radius: 50vh;
+    transition: all .3s;
+    backdrop-filter: brightness(0.7);
+    mask: linear-gradient(to top, black 90%, transparent)
+}
+
+.kategoria, .kategoria *{
+    cursor: pointer;
+}
+
+.kategoria:hover > .h3-conti{
+    border-top-left-radius: 50vh;
+    border-top-right-radius: 50vh;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    top: 0;
+    mask: linear-gradient(to bottom, black 90%, transparent);
+}
+
+.kategoria:hover img{
+    object-position: 35%;
+}
+
+.kategoria:hover{
+    transform: scale(1.2)
+}
+
+.katcim{    
+    position: relative;
+    color: whitesmoke;
+    width: 10ch;
+    opacity: 1;
+    font-family: dynapuff;
+    padding: 1vh;
+    border-radius: 50vh;
+    font-size: 3vh;
+    margin: 0;
+    text-align: center;
+}
+
+.kat-input{
+    width: 25vh;
+    height: 25vh;
+    opacity: 0;
+    position: absolute;
+    z-index: 100000;
+}
+
+#legordulos_menu_telefon > ul  li{
+    list-style-type: none;
+    padding-block: 3vh;
+    padding-inline: 2vh;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    position: absolute;
+    top: 0;
+    transition: .7s all;
+    background-color: #005A92;
+    color: whitesmoke;
+    border-radius: 4vh;
+    width: 25vh;
+    margin-top: 1px;
+    border: 2px solid #222;
+}  
+
+#legordulos_menu_telefon a{
+    display: none;
+}
+
+#legordulos_menu_telefon{
+    position: absolute;
+    top: 10vh;
+    right: calc(25vh + 5px);
+    opacity: 0;
+    transition: all .3s;
+}
+
+#telo_menu_bars{
+    color: white;
+}
+
+h1{
+    width: 100vw;
+}
+
+#lepesek_div {
+    border: 2px solid #222;
+}
+
+.fa-2x{
+    font-size: 4.5vh;
+}
+
+.fa-3x{
+    font-size: 6vh;
+}
+
+.menu-sav{
+    background-color: #005A92;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-top-left-radius: 4vh;
+    border-top-right-radius: 4vh;
+    border-bottom-left-radius: 12vh;
+    border-bottom-right-radius: 12vh;
+    border-top: 3px solid #222;
+    position: sticky;
+    top: 0;
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .navbar-telo{
+        display: none;
+    }
+    .btn{
+        top: 0;
+    }
+    .blocki, .offc_conti, .offc_conti img{
+        width: calc(var(--bs-offcanvas-width) - 10vh);
+    }
+    #telo_menu_bars{
+        display: none;
+    }
+    .menu-sav{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .btn{
+        display: none;
+    }
+    .blocki, .offc_conti, .offc_conti img{
+        width: 90vw;
+    }
+}
+
+
+
+/* home button */
+
+.home_button {
+    background-color: #0047ab;
+    padding: 8px;
+    transition: .3s;
+    margin: 25px;
+    border-radius: 5px;
+    position: fixed;
+    color: whitesmoke;
+}
+
+.home_button:hover {
+
+    color: #005A92;
+    background-color: whitesmoke;
+}
+
+@media screen and (max-width: 768px) {
+    .home_button {
+        margin: 10px;
+        top: 25px;
+    }
+}
+
+/* menu style */
+
+#menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    border: 3px solid whitesmoke;
+    width: calc(100px + 10vh + 3vh + 4*9vw);
+    margin-right: 20px;
+    padding: 1vh 1.5vh;
+    backdrop-filter: blur(20px);
+    display: flex;
+    z-index: 5;
+    border-top: none;
+    border-bottom-left-radius: 3vh;
+    border-bottom-right-radius: 3vh;
+    align-items: center;
+    transition: all .5s;
+    overflow: hidden;
+}
+
+#menu_fogomb {
+    list-style-type: none;
+    transition: .3s;
+    font-variant: small-caps;
+    text-decoration: none;
+    color: whitesmoke;
+    text-align: center;
+    transition: all .35s;
+    padding: 1vh 2vh;
+    margin: auto;
+    cursor: pointer;
+}
+
+#menu a {    
+    margin-inline: 10px;
+    list-style-type: none;
+    transition: .3s;
+    font-variant: small-caps;
+    font-size: 2.5vh;
+    text-decoration: none;
+    color: whitesmoke;
+    font-family: roboto2;
+    font-weight: bold;
+    text-align: center;
+    transition: all .35s;
+    padding: 1vh 2vh;
+    opacity: 0;
+    width: 9vw;
+    text-align: center;
+}
+
+#menu a:hover {
+    color: black;
+    background-color: white;
+    border-radius: 3vh;
+
+}
+
+@media screen and (max-width: 768px) {
+    #menu {
+        display: none;
+    }
+}
+
+/* univerzalis phone layout */
+
+.game_title > h1 {
+    font-variant: small-caps;
+    font-family: kreta-al;
+    font-size: 5vh;
+    text-align: center;
+}
+
+.game_title {
+    display: flex;
+    position: fixed;
+    position: relative;
+}
+
+.game_title > div > i {
+    margin-top: 30px;
+    margin-right: 30px;
+    float: right;
+}
+
+@media screen and (max-width: 768px) {
+    .game_title > h1 {
+        text-align: left;
+        margin-left: 20px;
+    }
+}
+
+#egesz_oldal {
+    transition: .3s;
+}
